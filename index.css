@@ -1,0 +1,55 @@
+.logo{
+margin-right: 2000px;}
+
+.foto{margin-left: 20px;
+    margin-top: 10px }
+
+.menus{
+border-radius: 20px;
+margin: -80px 250px 0px 350px;
+
+margin-right:50px; padding: 10px 50px;
+}
+
+li {font-family: Arial Black;
+border-radius: 20px;
+font-size: 13px;
+display:inline;
+padding: 18px;
+}
+
+.datos{width: 300px;
+background:linear-gradient(130deg,#052224, #07393d, #0b4146, #1f747c);
+padding:30px;
+margin:100px;
+margin-top: 50px;
+border-radius: 5px;
+}
+
+.datos-tran{margin-right: 300px;}
+
+.titulo{font-family: Arial; 
+font-size: 21px;  
+color:white;
+}
+
+.datos-dest{ 
+font-family: arial;
+font-size: 17px; 
+color: white;
+}    
+
+.formulario{
+width: 92%;
+padding: 10px;
+border-radius: 10px;
+margin-bottom: 20px;
+background-color:#0b4146;
+color:white;}
+
+.enviar {width: 100%;
+padding: 10px;
+background-color:#2da44e;
+font-family: arial ;
+color: aliceblue;
+border-radius: 10px;}
