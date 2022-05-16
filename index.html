@@ -12,7 +12,8 @@
 <body>
 
     <div class="logo">
-        <img src="imagenes/itba.png" height="180" class="foto">   
+        <img src="imagenes/itbanksinfondo.png" height="180" class="foto">   
+        <img src="imagenes/multicolor.png" width="1400">
     </div> 
 
     <div class="menu">
@@ -29,18 +30,21 @@
     <div class="datos-tran tabla">
 
         <section class="datos"> 
-            <h1 class="titulo">
-                TRANSFERENCIA BANCARIA
-            </h1>
+            <h1 class="titulo">TRANSFERENCIA BANCARIA</h1>
             <h3 class="datos-dest">DATOS DEL DESTINATARIO</h3>
-            <form class="formulario">
-                <input type="text" placeholder="Ingrese Nombre y Apellido" required>
-                <input type="text" placeholder="Ingrese DNI" required>
-                <input type="text" placeholder="Ingrese CBU" required>
+            <form>
+                <input class="formulario" type="text" placeholder="Ingrese Nombre y Apellido" required>
+                <input class="formulario" type="text" placeholder="Ingrese DNI" required>
+                <input class="formulario" type="text" placeholder="Ingrese CBU" required>
                 <input class="formulario moneda" type="text" placeholder="Monto que desea transferir" required>
-                <a class="enviar" href="index2.html" type="button">Transferir</a>
+                <select class="formulario">
+                    <option aria-placeholder="moneda"></option>
+                    <!-- <input class="formulario" type="button" placeholder="MONEDA" required> -->
+                    <option>Pesos</option>
+                    <option>Dolar</option>
+                </select>
             </form>
-            
+            <a class="enviar" href="index2.html" type="button">Transferir</a>
             <!-- <input class="enviar" type="submit" value="TRANSFERIR"> -->
         </section>
 
