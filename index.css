@@ -1,11 +1,17 @@
 .logo{
-    margin-right: 2000px;
+    margin-right: auto;
     cursor: pointer;
 }
 
 .foto {
     margin-left: 0px;
     margin-top: 0px;
+    height:180px;
+}
+
+.barra{
+
+    width:1440px
 }
 
 .menus {
@@ -79,6 +85,13 @@ li:hover {
     cursor: pointer;
 }
 
+header{
+    background-image: url(imagenes/fondo_itbank.jpeg);
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
 section .enviar:hover {
     box-shadow: 0 1px 2px #eee;
 }
