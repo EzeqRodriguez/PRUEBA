@@ -11,62 +11,68 @@
 </head>
 <body>
 
+    
+ <header>
     <div>
-        <header>
-            <div class="logo">
-                <img src="imagenes/itbanksinfondo.png" class="foto">   
-                <img src="imagenes/multicolor.png" class="barra">
-            </div> 
-        
-            <div class="menu">
-                <nav class="menus">   
-                    <ul class="sectores">
-                        <li>HACERSE MIEMBRO</li>
-                        <li>TRANSFERENCIAS</li>
-                        <li>HOME BANKING</li>
-                        <li>PREGUNTAS FRECUENTES</li>
-                    </ul>
-                </nav> 
-            </div>
-        </header>
-    </div>
+        <img src="imagenes/itbanksinfondo.png" class="iconoITBANK">   
+        <img src="imagenes/multicolor.png" class="barraColorida">
+    </div> 
+    <nav>  
+        <menu></menu> 
+           <ul class="menu">
+              <li>HACERSE MIEMBRO</li>
+              <li>TRANSFERENCIAS</li>
+              <li>HOME BANKING</li>
+              <li>PREGUNTAS FRECUENTES</li>
+           </ul>
+        </menu>
+    </nav> 
+ </header>
     <!-- <h2 class="reg">Regristro de Transferencias</h2> -->
-    <div class="datos-tran tabla">
 
-        <section class="datos"> 
-            <h1 class="titulo">TRANSFERENCIA BANCARIA</h1>
-            <h3 class="datos-dest">DATOS DEL DESTINATARIO</h3>
-            <form>
-                <input class="formulario" type="text" placeholder="Ingrese Nombre y Apellido" required>
-                <input class="formulario" type="text" placeholder="Ingrese DNI" required>
-                <input class="formulario" type="text" placeholder="Ingrese CBU" required>
-                <input class="formulario moneda" type="text" placeholder="Monto que desea transferir" required>
-                <select class="formulario">
-                    <option aria-placeholder="moneda"></option>
-                    <!-- <input class="formulario" type="button" placeholder="MONEDA" required> -->
-                    <option>Pesos</option>
-                    <option>Dolar</option>
-                </select>
-            </form>
-            <a class="enviar" href="index2.html" type="button">Transferir</a>
-            <!-- <input class="enviar" type="submit" value="TRANSFERIR"> -->
-        </section>
+    <main>
+            <section> 
+                    <div class="datos dimensionesCuadroTransferir">
+                       <h1 class="titulo">
+                           TRANSFERENCIA BANCARIA
+                       </h1>
+                       <h3 class="datos-dest">DATOS DEL DESTINATARIO</h3>
+           
+                       <input class="formulario" type="text" placeholder="Ingrese Nombre y Apellido" required>
+           
+                       <input class="formulario" type="text" placeholder="Ingrese DNI" required>
+           
+                       <input class="formulario" type="text" placeholder="Ingrese CBU" required>
+           
+                       <input class="formulario moneda" type="text" placeholder="Monto que desea transferir" required>
+           
+                       <select class="formulario">
+                          <option aria-placeholder="moneda"></option>
+                          <!-- <input class="formulario" type="button" placeholder="MONEDA" required> -->
+                          <option>Pesos</option>
+                          <option>Dolar</option>
+                       </select>
 
-    </div>
+                       <a class="enviar" href="index2.html" type="button">Transferir</a>
+                       <!-- <input class="enviar" type="submit" value="TRANSFERIR"> -->
+                    </div>
 
-    <section class="tabla loc">
-        <table>
-            <tr>
-                <th>Fecha</th>
-                <th>Destinatario</th>
-                <th>Monto</th>
-            </tr>
-            <tr>
-                <td>15/5/2022</td>
-                <td>Miguelito</td>
-                <td>2.354$</td>
-            </tr>
-        </table>
-    </section>
+                    
+                    <div class="tablaF dimensionesTabla tablaT">
+                        <table>
+                            <tr>
+                                <th>Fecha</th>
+                                <th>Destinatario</th>
+                                <th>Monto</th>
+                            </tr>
+                            <tr>
+                                <td>15/5/2022</td>
+                                <td>Miguelito</td>
+                                <td>2.354$</td>
+                            </tr>
+                        </table>
+            </section>
+        </div>
+    </main>
 </body>
 </html>
