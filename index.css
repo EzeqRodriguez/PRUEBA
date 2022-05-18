@@ -89,7 +89,7 @@ li {
     padding: 18px;
     cursor: pointer;
 }
-
+ 
 li:hover {
     text-shadow: 1px 1px 1px #1f747c;
 }
