@@ -1,9 +1,3 @@
-section .inises {
-  align-content: center;
-  width: 50%;
-  margin-left: 40px;
-}
-
 .formulario {
   width: 52%;
   padding: 10px;
@@ -26,5 +20,23 @@ section .inises {
 .barra {
   width: 100%;
   height: 30px;
+}
+
+.enviar {
+  text-decoration: none;
+}
+
+.enviar:hover {
+  color: #f00;
+}
+
+.princ {
+  margin: 50px;
+  width: 50%;
+}
+
+.princ:hover {
+  text-shadow: 1px 1px 1px #1f747c;
+  cursor: pointer;
 }
 /*# sourceMappingURL=prueba.css.map */
