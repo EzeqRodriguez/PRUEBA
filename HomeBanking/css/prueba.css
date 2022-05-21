@@ -29,4 +29,14 @@
 .enviar:hover {
   color: #f00;
 }
+
+.princ {
+  margin: 50px;
+  width: 50%;
+}
+
+.princ:hover {
+  text-shadow: 1px 1px 1px #1f747c;
+  cursor: pointer;
+}
 /*# sourceMappingURL=prueba.css.map */
