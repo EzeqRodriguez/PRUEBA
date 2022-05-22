@@ -40,3 +40,18 @@
   cursor: pointer;
 }
 /*# sourceMappingURL=prueba.css.map */
+
+.serv li ul{font-family: Arial;
+font-size: 20px;
+display:none;
+position: absolute;
+}
+
+.serv li:hover > ul{display: block;}
+
+.sorv{font-size: 25px;
+font-family: Arial;
+margin-top: 20px;}
+
+.tit {margin-top:20px;}
+.tite{margin-top:20px;}
