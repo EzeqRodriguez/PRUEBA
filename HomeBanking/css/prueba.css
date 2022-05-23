@@ -9,7 +9,7 @@
 
 .titulo {
   font-family: Arial;
-  font-size: 21px;
+  font-size: 20px;
   color: white;
 }
 
@@ -27,7 +27,7 @@
 }
 
 .enviar:hover {
-  color: #f00;
+  color: #4fbd4b;
 }
 
 .princ {
@@ -36,7 +36,7 @@
 }
 
 .princ:hover {
-  text-shadow: 1px 1px 1px #1f747c;
+  text-shadow: 1px 1px 1px #1f747d;
   cursor: pointer;
 }
 
@@ -50,7 +50,7 @@
 }
 
 .comp_cuen {
-  background-color: #0b4146;
+  background-color: #0b4147;
   margin: 50px;
   margin-left: 13%;
   padding: 50px;
@@ -86,10 +86,14 @@
 
 .ayuda {
   color: white;
-  background-color: #0b4146;
+  background-color: #0b4147;
   width: 25%;
   border-radius: 10px;
   margin: 50px;
   padding: 10px;
+}
+
+.deb-cred {
+  text-decoration: none;
 }
 /*# sourceMappingURL=prueba.css.map */
