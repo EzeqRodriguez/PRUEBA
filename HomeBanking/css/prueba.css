@@ -39,19 +39,29 @@
   text-shadow: 1px 1px 1px #1f747c;
   cursor: pointer;
 }
-/*# sourceMappingURL=prueba.css.map */
 
-.serv li ul{font-family: Arial;
-font-size: 20px;
-display:none;
-position: absolute;
+.comp {
+  background-color: #0b4146;
+  margin: 50px;
+  margin-left: 13%;
+  padding: 50px;
+  width: 75%;
+  border-radius: 10px;
 }
 
-.serv li:hover > ul{display: block;}
+.tarj {
+  margin-left: 45%;
+}
 
-.sorv{font-size: 25px;
-font-family: Arial;
-margin-top: 20px;}
+.tar {
+  color: white;
+}
 
-.tit {margin-top:20px;}
-.tite{margin-top:20px;}
+.sig {
+  color: black;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  background-color: black;
+}
+/*# sourceMappingURL=prueba.css.map */
