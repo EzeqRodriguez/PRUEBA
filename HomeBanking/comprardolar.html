@@ -70,7 +70,7 @@
     
     </form>
 
-    <table id="lista-usuarios" class="table table-success table-striped">
+    <table id="lista-objetos" class="table table-success table-striped">
 
 
         <tbody>
@@ -91,18 +91,18 @@
 
 
     <script>
-const tabla = document.querySelector('#lista-usuarios tbody');
+const tabla = document.querySelector('#lista-objetos tbody');
 
 function cargarDolar() {
     fetch('https://www.dolarsi.com/api/api.php?type=valoresprincipales')
         .then(response => response.json())
-        .then(usuarios => {
-            usuarios.forEach(usuario => {
+        .then(objetos => {
+            objetos.forEach(objeto => {
                 const row = document.createElement('tr');
                 row.innerHTML += `
-                <td>${usuario.casa.nombre}</td>
-                <td>${usuario.casa.compra}</td>
-                <td>${usuario.casa.venta}</td>
+                <td>${objeto.casa.nombre}</td>
+                <td>${objeto.casa.compra}</td>
+                <td>${objeto.casa.venta}</td>
                 `;
                 tabla.appendChild(row);
 
