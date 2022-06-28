@@ -20,10 +20,9 @@ function cargarDolar() {
             response.forEach(response => {
 
                 console.log(response);
-
-            });
-
+                var nom = document.getElementById('nombre');
+                nom.innerHTML = response;
+            })
         })
-    
 }
 cargarDolar();
