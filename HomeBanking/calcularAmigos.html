@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalcularGastos</title>
+    <link rel="icon" type="image/x-icon" href="imagenes/N-ITBANK.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/prueba.css">
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="imagenes/itbanksinfondo.png">
+        <img class="barra" src="imagenes/multicolor.png">
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <p>MENU</p>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="IniSes.html">Iniciar Sesion</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="comprardolar.html">Comprar Dolares</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="calcularAmigos.html">Calcular Gastos</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Consultas
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="cuentas.html">Cuentas</a></li>
+                                <li><a class="dropdown-item" href="tarjetas.html">Tarjetas</a></li>
+                                <li><a class="dropdown-item" href="prestamos.html">Préstamos</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Transacciones
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="transferencias.html">Transferencias</a></li>
+                                <li><a class="dropdown-item" href="pagoserv.html">Pago de servicios e impuestos</a></li>
+                                <li><a class="dropdown-item" href="pagotarj.html">Pago de Tarjeta</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="res">
+        <h4>Hay algo mejor que salir con amigos?</h4>
+        <p>OBVIO QUE SI !!!</p>
+        <p>
+            Aquí vas a poder sumar los gastos de todos<br>
+            y dividirlos en partes iguales asi nadie se<br>
+            preocupa por sus gastos. Vamos a pagar ;)
+        </p>
+    </div>
+    <div class="formulario">
+
+        <input type="text" id="amigos" placeholder="Ingresar Nombre" required="">
+
+        <input type="number" id="montos" placeholder="Ingrese Monto" required="">
+
+        <input class="btn btn-primary" id="agregarMonto" type="submit" value="Agregar"
+            onclick="agregarALista()">
+
+        <input class="btn btn-primary" id="calcular" type="submit" value="Calcular" onclick="mostrarTot()"></input>
+
+        <ul id="listaDeGastos">
+        </ul>
+
+        <p id="total"></p>
+
+    </div>
+
+
+<script>
+
+    var amigo = [];
+var gasto = [];
+const personas = document.getElementById('amigos');
+const gastos = document.getElementById('montos');
+const totals = document.getElementById('total');
+const listado = document.getElementById('listaDeGastos');
+
+
+function agregarALista() {
+    agregarDatos();
+    lista();
+}
+
+function mostrarTot() {
+    mostrarRes();
+}
+
+function agregarDatos() {
+
+    amigo.push(personas.value);
+    gasto.push(montos.value);
+}
+
+function lista() {
+    const li = document.createElement('li')
+    li.classList.add('listaDeGastos');
+    const text = document.createTextNode(
+        `${amigo[amigo.length - 1]} $${gasto[gasto.length - 1]}`
+    );
+
+    li.appendChild(text);
+    listado.appendChild(li);
+}
+
+
+function mostrarRes() {
+    const total = sumarElTotal(gasto).toFixed();
+    totals.innerText = `En total gastaron ${total} $ cada uno debe pagar: ${total / gasto.length}$`;
+}
+
+function sumarElTotal(tot) {
+    let total = 0;
+    for (var i = 0; i < tot.length; i++) {
+        total += parseInt(tot[i]);
+    }
+    return total;
+}
+</script>
+
+</body>
+
+</html>
