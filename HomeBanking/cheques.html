@@ -70,10 +70,11 @@
         <tr>
           <th scope="col">#</th>
           <th scope="col">Estado</th>
+          <th scope="col">Tipo</th>
           <th scope="col">Monto</th>
+          <th scope="col">cupo Diario Restante</th>
           <th scope="col">Saldo en la Cuenta</th>
           <th scope="col">Fecha</th>
-          <th scope="col">Tipo</th>
         </tr>
       </thead>
       <tbody id="contenido">
@@ -101,10 +102,11 @@ function tabla(datos){
     <tr>
         <th scope="row">${datos.transacciones[i].numero}</th>
         <td>${datos.transacciones[i].estado}</td>
+        <td>${datos.transacciones[i].tipo}</td>
         <td>${datos.transacciones[i].monto}</td>
+        <td>${datos.transacciones[i].cupoDiarioRestante}</td>
         <td>${datos.transacciones[i].saldoEnCuenta}</td>
         <td>${datos.transacciones[i].fecha}</td>
-        <td>${datos.transacciones[i].tipo}</td>
     </tr>
     `
   }
