@@ -1,8 +1,8 @@
 {
 	"numero": 100001,
-	"nombre": "Nicolas",
-	"apellido": "Gaston",
-	"dni": "29494777",
+	"nombre": "Tobias",
+	"apellido": "Gutierrez",
+	"dni": "46856987",
 	"tipo": "GOLD",
 	"direccion" : {
 		"calle" : "Rivadavia",

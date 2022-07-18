@@ -1,8 +1,8 @@
 {
 	"numero": 100001,
-	"nombre": "Nicolas",
-	"apellido": "Gaston",
-	"dni": "29494777",
+	"nombre": "Mateo",
+	"apellido": "Folino",
+	"dni": "43815099",
 	"tipo": "CLASSIC",
 	"direccion" : {
 		"calle" : "Rivadavia",

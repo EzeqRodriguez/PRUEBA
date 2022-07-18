@@ -65,16 +65,19 @@ html_template = """<html>
 </header>
 <main>
   <div class="container my-5 text-center">
-    <button class="btn btn-danger w-100" onclick="traer()">Obtener</button>
+    <input type="text" id="dni" placeholder="Ingresar DNI" required="">
+    <input class="btn btn-primary" id="agregarMonto" type="submit" value="Chequear" onclick="traer()"></input>
     <div class="mt-5">
     <table class="table">
       <thead>
         <tr>
           <th scope="col">#</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Apellido</th>
           <th scope="col">Estado</th>
           <th scope="col">Tipo</th>
           <th scope="col">Monto</th>
-          <th scope="col">cupo Diario Restante</th>
+          <th scope="col">Cupo Diario Restante</th>
           <th scope="col">Saldo en la Cuenta</th>
           <th scope="col">Fecha</th>
         </tr>
@@ -88,11 +91,29 @@ html_template = """<html>
 </main>
 <script>
 var contenido = document.querySelector('#contenido')
+const documento = document.getElementById('dni');
+
 function traer(){
   fetch('ejemplos_json/black.json')
     .then(res => res.json())
     .then(datos => {
+      if(documento.value == datos.dni){
       tabla(datos)
+      }
+    })
+  fetch('ejemplos_json/classic.json')
+    .then(res => res.json())
+    .then(datos => {
+      if(documento.value == datos.dni){
+      tabla(datos)
+      }
+    })
+  fetch('ejemplos_json/gold.json')
+    .then(res => res.json())
+    .then(datos => {
+      if(documento.value == datos.dni){
+      tabla(datos)
+      }
     })
 }
 function tabla(datos){
@@ -103,6 +124,8 @@ function tabla(datos){
     contenido.innerHTML += `
     <tr>
         <th scope="row">${datos.transacciones[i].numero}</th>
+        <th>${datos.nombre}</th>
+        <th>${datos.apellido}</th>
         <td>${datos.transacciones[i].estado}</td>
         <td>${datos.transacciones[i].tipo}</td>
         <td>${datos.transacciones[i].monto}</td>
