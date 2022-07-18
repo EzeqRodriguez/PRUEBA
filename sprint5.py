@@ -12,7 +12,7 @@ html_template = """<html>
 </head>
 <body>
 <header>
-<img class="logo" src="imagenes/itbanksinfondo.png">
+        <img class="logo" src="imagenes/itbanksinfondo.png">
         <img class="barra" src="imagenes/multicolor.png">
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
@@ -63,6 +63,56 @@ html_template = """<html>
             </div>
           </nav>
 </header>
+<main>
+  <div class="container my-5 text-center">
+    <button class="btn btn-danger w-100" onclick="traer()">Obtener</button>
+    <div class="mt-5">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Estado</th>
+          <th scope="col">Monto</th>
+          <th scope="col">Saldo en la Cuenta</th>
+          <th scope="col">Fecha</th>
+          <th scope="col">Tipo</th>
+        </tr>
+      </thead>
+      <tbody id="contenido">
+        
+      </tbody>
+    </table>
+    </div>
+  </div>
+</main>
+<script>
+var contenido = document.querySelector('#contenido')
+function traer(){
+  fetch('ejemplos_json/black.json')
+    .then(res => res.json())
+    .then(datos => {
+      tabla(datos)
+    })
+}
+function tabla(datos){
+  contenido.innerHTML= ''
+  console.log(datos.transacciones.length)
+  for (var i=0;i<datos.transacciones.length;i++){
+    console.log(datos.transacciones[i]);
+    contenido.innerHTML += `
+    <tr>
+        <th scope="row">${datos.transacciones[i].numero}</th>
+        <td>${datos.transacciones[i].estado}</td>
+        <td>${datos.transacciones[i].monto}</td>
+        <td>${datos.transacciones[i].saldoEnCuenta}</td>
+        <td>${datos.transacciones[i].fecha}</td>
+        <td>${datos.transacciones[i].tipo}</td>
+    </tr>
+    `
+  }
+}
+
+</script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </body>
