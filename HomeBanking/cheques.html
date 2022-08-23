@@ -62,80 +62,20 @@
           </nav>
 </header>
 <main>
-  <div class="container my-5 text-center">
-    <input type="text" id="dni" placeholder="Ingresar DNI" required="">
-    <input class="btn btn-primary" id="agregarMonto" type="submit" value="Chequear" onclick="traer()"></input>
-    <div class="mt-5">
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Nombre</th>
-          <th scope="col">Apellido</th>
-          <th scope="col">Estado</th>
-          <th scope="col">Tipo</th>
-          <th scope="col">Monto</th>
-          <th scope="col">Cupo Diario Restante</th>
-          <th scope="col">Saldo en la Cuenta</th>
-          <th scope="col">Fecha</th>
-        </tr>
-      </thead>
-      <tbody id="contenido">
-        
-      </tbody>
-    </table>
-    </div>
-  </div>
-</main>
-<script>
-var contenido = document.querySelector('#contenido')
-const documento = document.getElementById('dni');
-
-function traer(){
-  fetch('ejemplos_json/black.json')
-    .then(res => res.json())
-    .then(datos => {
-      if(documento.value == datos.dni){
-      tabla(datos)
-      }
-    })
-  fetch('ejemplos_json/classic.json')
-    .then(res => res.json())
-    .then(datos => {
-      if(documento.value == datos.dni){
-      tabla(datos)
-      }
-    })
-  fetch('ejemplos_json/gold.json')
-    .then(res => res.json())
-    .then(datos => {
-      if(documento.value == datos.dni){
-      tabla(datos)
-      }
-    })
-}
-function tabla(datos){
-  contenido.innerHTML= ''
-  console.log(datos.transacciones.length)
-  for (var i=0;i<datos.transacciones.length;i++){
-    console.log(datos.transacciones[i]);
-    contenido.innerHTML += `
+<table class="table">
+  <thead>
     <tr>
-        <th scope="row">${datos.transacciones[i].numero}</th>
-        <th>${datos.nombre}</th>
-        <th>${datos.apellido}</th>
-        <td>${datos.transacciones[i].estado}</td>
-        <td>${datos.transacciones[i].tipo}</td>
-        <td>${datos.transacciones[i].monto}</td>
-        <td>${datos.transacciones[i].cupoDiarioRestante}</td>
-        <td>${datos.transacciones[i].saldoEnCuenta}</td>
-        <td>${datos.transacciones[i].fecha}</td>
+      <th scope="col">Estado</th>
+      <th scope="col">Tipo</th>
+      <th scope="col">Monto</th>
+      <th scope="col">Fecha</th>
     </tr>
-    `
-  }
-}
-
-</script>
+  </thead>
+  <tbody>
+<tr><td>ACEPTADA</td><td>RETIRO_EFECTIVO_CAJERO_AUTOMATICO</td><td>1000</td><td>20/06/2022 16:00:55</td></tr><tr><td>RECHAZADA</td><td>RETIRO_EFECTIVO_CAJERO_AUTOMATICO</td><td>11000</td><td>20/06/2022 17:00:55</td></tr><tr><td>RECHAZADA</td><td>RETIRO_EFECTIVO_CAJERO_AUTOMATICO</td><td>9000</td><td>20/06/2022 18:00:55</td></tr><tr><td>RECHAZADA</td><td>RETIRO_EFECTIVO_CAJERO_AUTOMATICO</td><td>19000</td><td>21/06/2022 10:11:11</td></tr><tr><td>RECHAZADA</td><td>ALTA_TARJETA_CREDITO</td><td>9000</td><td>22/06/2022 16:00:55</td></tr><tr><td>RECHAZADA</td><td>ALTA_CHEQUERA</td><td>9000</td><td>23/06/2022 16:00:55</td></tr><tr><td>RECHAZADA</td><td>COMPRA_DOLAR</td><td>9000</td><td>24/06/2022 16:00:55</td></tr><tr><td>ACEPTADA</td><td>TRANSFERENCIA_ENVIADA</td><td>100000</td><td>25/06/2022 16:00:55</td></tr><tr><td>ACEPTADA</td><td>TRANSFERENCIA_RECIBIDA</td><td>9000</td><td>24/06/2022 17:00:00</td></tr><tr><td>RECHAZADA</td><td>TRANSFERENCIA_RECIBIDA</td><td>200000</td><td>25/06/2022 16:00:55</td></tr>
+  </tbody>
+</table>
+    </main>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </body>
